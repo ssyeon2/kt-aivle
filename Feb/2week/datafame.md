@@ -33,6 +33,16 @@ pd.cut(['A'], bins, labels)
 * pd.concat(): 
     * 구조를 맞춰서 결합
     * 구조가 같은 경우 이내 위 붙이기
+   ```python
+   # join = 'inner', 'outer'
+   # axis = 1(가로 합치기), axis = 0(가로 합치기)
+   pd.concat([df1, df2], join = 'inner', axis = 1)
+
+
 * merge():
     * 값을 맞춰서 결합
-    * key 값을 설정하여 옆으로 
+    * key 값을 설정하여 옆으로
+    * 옆으로 합치는 경우만 존재 
+   ```python
+   # 'inner', 'outer', 'right', 'left
+   pd.merge(df1, df2, how = 'inner', on = key)
